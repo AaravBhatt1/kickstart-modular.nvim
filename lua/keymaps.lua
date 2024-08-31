@@ -45,4 +45,6 @@ vim.api.nvim_create_autocmd('TextYankPost', {
   end,
 })
 
+-- Open explorer quickly
+vim.keymap.set('n', '<leader>ex', '<cmd>Explore<CR>', { desc = 'Open the file explorer' })
 -- vim: ts=2 sts=2 sw=2 et
