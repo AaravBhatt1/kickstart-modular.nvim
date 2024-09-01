@@ -45,6 +45,11 @@ vim.api.nvim_create_autocmd('TextYankPost', {
   end,
 })
 
+-- Diagnostic keymaps
+vim.keymap.set('n', ']d', vim.diagnostic.goto_next, { desc = 'Go to next [D]iagnostic message' })
+vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, { desc = 'Go to previous [D]iagnostic message' })
+-- TODO: Add a keymap to open the diagnostic message
+
 -- Open explorer quickly
-vim.keymap.set('n', '<leader>ex', '<cmd>Explore<CR>', { desc = 'Open the file explorer' })
+-- vim.keymap.set('n', '<leader>ex', '<cmd>Explore<CR>', { desc = 'Open the file explorer' })
 -- vim: ts=2 sts=2 sw=2 et
